@@ -15,7 +15,7 @@ int main() {
         socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 12345));
 
         //서버로 보낼 메시지를 std::string 객체에 저장
-        std::string message = "Hello, server!\n";
+        std::string message = "Hello, server 한글되냐?!\n";
         //message에 저장된 데이터를 서버로 전송합니다. 
         // boost::asio::buffer는 메모리 버퍼를 생성하여 write 함수가 전송할 데이터를 소켓을 통해 보낼 수 있게 합니다.
         boost::asio::write(socket, boost::asio::buffer(message));
