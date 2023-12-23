@@ -12,7 +12,7 @@ int main() {
         //TCP 소켓 객체를 생성합니다. 이 소켓은 서버에 연결하고 데이터를 주고받기 위해 사용
         tcp::socket socket(io_service);
         //소켓을 통해 서버에 연결을 시도합니다. 여기서는 로컬호스트 주소인 127.0.0.1과 포트 12345를 사용
-        socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 12345));
+        socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 12333));
 
         //서버로 보낼 메시지를 std::string 객체에 저장
         std::string message = "Hello, server 한글되냐?!\n";
